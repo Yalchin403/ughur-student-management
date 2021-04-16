@@ -31,7 +31,6 @@ def doLogin(request):
         if user != None:
             login(request, user)
             user_type = user.user_type
-            #return HttpResponse("Email: "+request.POST.get('email')+ " Password: "+request.POST.get('password'))
             if user_type == '1':
                 return redirect('admin_home')
                 
@@ -43,11 +42,10 @@ def doLogin(request):
                 # return HttpResponse("Student Login")
                 return redirect('student_home')
             else:
-                messages.error(request, "Invalid Login!")
+                messages.error(request, "Giriş Edərkən Xəta Baş Verdi!")
                 return redirect('login')
         else:
-            messages.error(request, "Invalid Login Credentials!")
-            #return HttpResponseRedirect("/")
+            messages.error(request, "Şifrə və ya Email Yanlışdır!")
             return redirect('login')
 
 
