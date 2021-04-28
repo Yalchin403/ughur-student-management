@@ -1,4 +1,18 @@
-[Demo Mode Here](https://yalchin.me)
+[Demo Mode Here](https://yalchin.info)
+* To Login As Admin (Head of Department)
+
+      email: yalchinmammadli@outlook.com
+      pass: TestAdmin-18
+* To Login As Staff
+
+      email: aytansalimli@gmail.com
+      pass: Ayten-1
+
+* To Login As Student
+
+      email: yalcin.memmedli.66@gmail.com
+      pass: Amil-1
+
 # Django Student Management System
 I have not written this website from the scratch, especially the frontend. I have taken the front end from a project developed by another developer and changed the backend.
 
