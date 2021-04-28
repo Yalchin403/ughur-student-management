@@ -1,4 +1,4 @@
-[Demo Mode Here](https://yalchin.info)
+[Demo Mode Here](https://yalchin.me)
 # Django Student Management System
 I have not written this website from the scratch, especially the frontend. I have taken the front end from a project developed by another developer and changed the backend.
 
