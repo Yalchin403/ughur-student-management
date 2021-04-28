@@ -15,26 +15,15 @@ from student_management_app.models import CustomUser, Staffs, Group, Subjects, S
 def staff_home(request):
     # Fetching All Students under Staff
 
-    subjects = Subjects.objects.filter(staff_id=request.user.id)
+    current_staff = Staffs.objects.get(admin=request.user.id)
+    group_count = current_staff.group_id.count()
     current_staff = request.user.staffs
     current_staff_groups = current_staff.group_id.all()
     num_of_student = 0
     for group in current_staff_groups:
         num_of_student += group.students_set.count()
-    # course_id_list = []
-    # for subject in subjects:
-    #     course = Courses.objects.get(id=subject.course_id.id)
-    #     course_id_list.append(course.id)
     
-    # final_course = []
-    # Removing Duplicate Course Id
-    # for course_id in course_id_list:
-    #     if course_id not in final_course:
-    #         final_course.append(course_id)
-    
-    # students_count = Students.objects.filter(course_id__in=final_course).count()
     students_count = num_of_student
-    subject_count = subjects.count()
 
     # Fetch All Attendance Count
     attendance_count = Attendance.objects.filter(group_id__in=current_staff_groups).count()
@@ -68,7 +57,7 @@ def staff_home(request):
         "attendance_count": attendance_count,
         "leave_count": leave_count,
         "students_count": students_count,
-        "subject_count": subject_count,
+        "group_count": group_count,
         "group_name_list": group_name_list,
         "attendance_list": attendance_list,
         "group_name_colors":group_name_colors,
