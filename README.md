@@ -1,8 +1,9 @@
-[Demo Mode Here](https://yalchin.info)
+[Demo Mode Here](http://ureminder.ml)
 * To Login As Admin (Head of Department)
 
       email: yalchinmammadli@outlook.com
       pass: TestAdmin-18
+
 * To Login As Staff
 
       email: aytansalimli@gmail.com
@@ -10,7 +11,7 @@
 
 * To Login As Student
 
-      email: yalcin.memmedli.66@gmail.com
+      email: amilyunuslu@gmail.com
       pass: Amil-1
 
 # Django Student Management System
